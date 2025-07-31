@@ -1,0 +1,86 @@
+root = true
+
+# C# files
+[*.cs]
+indent_size = 2
+indent_style = space
+tab_width = 4
+
+csharp_new_line_before_open_brace = never
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false
+csharp_new_line_before_members_in_object_initializers = false
+csharp_new_line_before_members_in_anonymous_types = false
+csharp_new_line_between_query_expression_clauses = false
+
+# IDE0210: Convert to top-level statements
+csharp_style_prefer_top_level_statements = false
+
+# IDE0090: Use 'new(...)'
+csharp_style_implicit_object_creation_when_type_is_apparent = false
+
+dotnet_style_qualification_for_field = true:warning
+dotnet_style_qualification_for_property = true:warning
+dotnet_style_qualification_for_method = true:warning
+
+csharp_style_expression_bodied_methods = true
+csharp_preserve_single_line_blocks = true
+
+# Properties and methods use camel case
+dotnet_naming_rule.properties_and_methods_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.properties_and_methods_should_be_camelcase.symbols = properties_and_methods
+dotnet_naming_rule.properties_and_methods_should_be_camelcase.style = camelcase
+
+dotnet_naming_symbols.properties_and_methods.applicable_kinds = property, method
+dotnet_naming_symbols.properties_and_methods.applicable_accessibilities = *
+
+# Classes and other types use Pascal case
+dotnet_naming_rule.types_should_be_pascalcase.severity = suggestion
+dotnet_naming_rule.types_should_be_pascalcase.symbols = types
+dotnet_naming_rule.types_should_be_pascalcase.style = pascalcase
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum, namespace, type_parameter
+dotnet_naming_symbols.types.applicable_accessibilities = *
+
+# Local variables and constants use camel case
+dotnet_naming_rule.local_variables_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.local_variables_should_be_camelcase.symbols = local_variables
+dotnet_naming_rule.local_variables_should_be_camelcase.style = camelcase
+
+dotnet_naming_rule.local_constants_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.local_constants_should_be_camelcase.symbols = local_constants
+dotnet_naming_rule.local_constants_should_be_camelcase.style = camelcase
+
+# Parameters use camel case
+dotnet_naming_rule.parameters_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.parameters_should_be_camelcase.symbols = parameters
+dotnet_naming_rule.parameters_should_be_camelcase.style = camelcase
+
+# Public fields use Pascal case
+dotnet_naming_rule.public_fields_should_be_pascalcase.severity = suggestion
+dotnet_naming_rule.public_fields_should_be_pascalcase.symbols = public_fields
+dotnet_naming_rule.public_fields_should_be_pascalcase.style = pascalcase
+
+# Private fields use _camelCase
+dotnet_naming_rule.private_fields_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.private_fields_should_be_camelcase.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camelcase.style = camelcase
+
+# Private static fields use s_camelCase
+dotnet_naming_rule.private_static_fields_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.private_static_fields_should_be_camelcase.symbols = private_static_fields
+dotnet_naming_rule.private_static_fields_should_be_camelcase.style = camelcase
+
+# Private static readonly fields use camel case
+dotnet_naming_rule.private_static_readonly_fields_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.private_static_readonly_fields_should_be_camelcase.symbols = private_static_readonly_fields
+dotnet_naming_rule.private_static_readonly_fields_should_be_camelcase.style = camelcase
+
+# Define naming styles
+dotnet_naming_style.camelcase.capitalization = camel_case
+dotnet_naming_style.pascalcase.capitalization = pascal_case
+dotnet_naming_style._camelcase.required_prefix = _
+dotnet_naming_style._camelcase.capitalization = camel_case
+dotnet_naming_style.s_camelcase.required_prefix = s_
+dotnet_naming_style.s_camelcase.capitalization = camel_case
